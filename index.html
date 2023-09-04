@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Demo - Creative css focus and active class animations</title>
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="dd-wrapper">
+		<div class="dd-center-content">
+			<h1 class="dd-title">Active and focus animations</h1>
+			<div class="dd-elements">
+				<div class="boxes skew" dd-boxes>
+					<span class="right">To Right</span>
+					<span class="left">To Left</span>
+					<span class="right">To Right</span>
+					<span class="left">To Left</span>
+				</div>
+				<div class="boxes perspective" dd-boxes>
+					<span class="left">Perspactive Left</span>
+					<span class="right">Perspactive Right</span>
+					<span class="top">Perspactive Top</span>
+					<span class="bottom">Perspactive Bottom</span>
+				</div>
+				<div class="boxes perspective" dd-boxes>
+					<span class="left big">Perspactive Large Left</span>
+					<span class="right big">Perspactive Large Right</span>
+					<span class="top big">Perspactive Large Top</span>
+					<span class="bottom">Perspactive Large Bottom</span>
+				</div>
+				<div class="boxes perspective" dd-boxes>
+					<span class="per-ryy">Perspactive-RotateY</span>
+					<span class="per-rxx">Perspactive-RotateX</span>
+				</div>
+				<div class="boxes zoom" dd-boxes>
+					<span class="out">Zoom Out</span>
+					<span class="in">Zoom In</span>
+					<span class="in-out">Zoom In Out</span>
+					<span class="out-in">Zoom Out In</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script>
+		$('[dd-boxes] span').click(function() {
+			$(this).parent().find('span').removeClass('active');
+			$(this).addClass('active');
+		});
+	</script>
+</body>
+</html>
